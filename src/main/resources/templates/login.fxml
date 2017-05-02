@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+
+<GridPane fx:id="login" fx:controller="com.dubovyk.tripletsvodetect.GUIControl.ControllerLogin"
+          styleClass="root"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="20" vgap="20" stylesheets="@../css/Login.css">
+    <padding><Insets top="5" right="25" bottom="5" left="25" /></padding>
+
+    <Text styleClass="WelcomeText" text="Login to the Neo4j server"
+    GridPane.columnIndex="0" GridPane.rowIndex="0"
+    GridPane.columnSpan="2"/>
+
+    <Label styleClass="label" text="IP address"
+    GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <TextField text="127.0.0.1" fx:id="address" styleClass="inputField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label styleClass="label" text="Port"
+           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+    <TextField text="7687" fx:id="port" styleClass="inputField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label styleClass="label" text="Username"
+           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+    <TextField text="neo4j" fx:id="user" styleClass="inputField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Label styleClass="label" text="Password"
+           GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+
+    <PasswordField text="Password" fx:id="password" styleClass="inputField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <HBox spacing="10" alignment="TOP_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <Button styleClass="submitButton" text="Log in" onAction="#handleSubmitButtonAction"/>
+    </HBox>
+</GridPane>
